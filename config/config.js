@@ -26,7 +26,7 @@ if (process.env.INSIGHT_NETWORK === 'livenet') {
   db = home;
   port = '3000';
   b_port = '14022';
-  p2p_port = '12024';
+  p2p_port = '26001';
 } else {
   env = 'testnet';
   db = home + '/testnet';
@@ -58,7 +58,7 @@ var isLinux = /^linux/.test(process.platform);
 if (!dataDir) {
   if (isWin) dataDir = '%APPDATA%\\Digibyte\\';
   if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Digibyte/';
-  if (isLinux) dataDir = process.env.HOME + '/.digibyte/';
+  if (isLinux) dataDir = process.env.HOME + '/.Aryacoin/';
 }
 dataDir += network === 'testnet' ? 'testnet3' : '';
 
